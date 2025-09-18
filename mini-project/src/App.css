@@ -1,0 +1,80 @@
+.body{
+  background-color:white;
+}
+
+.app{
+  background-color: azure;
+}
+
+.calc{
+  padding: 7px;
+  box-shadow: 2px 2px 2px 2px;
+}
+
+.calc-buttons{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 20vw;
+}
+
+.calc-buttons button{
+  margin-top: 8px;
+  background-color: royalblue;
+  color: white;
+  width: 80px;
+  height: 40px;
+  border-color: royalblue;
+  border-radius: 2px;
+}
+
+.calc-inputs{
+  width: 40vw;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.calc-inputs input{
+  margin: 5px 0;
+  height: 30px;
+  padding: 7px;
+}
+
+.calc-result{
+  text-align: center;
+}
+
+.api{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+}
+.api-card{
+  background-color: white;
+  margin: 15px;
+  padding: 5px;
+  box-shadow:4px 4px 4px 4px;
+  width: 20vw;
+  height: 40vw;
+}
+
+.api-card img{
+  height: 200px;
+  width: 120px;
+}
+
+
+.api-buttons button{
+  background-color: green;
+  border-color: green;
+  border-radius: 5px;
+  color: white;
+  width: 80px;
+  height: 40px;
+  margin: 5px;
+}
+
+.api-buttons{
+  display: flex;
+  align-items: center;
+  margin-left: 40vw;
+}
