@@ -10,6 +10,19 @@ export default class ToDo extends Component {
         }
     }
 
+    componentDidMount(){
+        window.addEventListener('keydown',this.handleKeyPress)
+    }
+    componentWillUnMount(){
+        window.removeEventListener('keydown',this.handleKeyPress)
+    }
+
+    handleKeyPress(e){
+        if(e.key.toLowerCase() === 'a'){
+            alert('Dont press A button!')
+        }
+    }
+
     add = () => {
         const updatedTasks = [...this.state.tasks,{heading:this.state.heading, description:this.state.description,completed:false}];
         this.setState({tasks:updatedTasks , heading:'', description:''});
