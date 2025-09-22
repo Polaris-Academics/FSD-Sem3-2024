@@ -1,3 +1,6 @@
+@import "tailwindcss";
+
+
 .body{
   background-color:white;
 }
@@ -77,4 +80,8 @@
   display: flex;
   align-items: center;
   margin-left: 40vw;
+}
+
+.btn-stopwatch{
+  @apply px-4 py-2 rounded-lg border-2 border-black bg-blue-600 text-white border-blue-600 hover:bg-blue-300 hover:border-white hover:text-black
 }

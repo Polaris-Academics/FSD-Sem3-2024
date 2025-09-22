@@ -1,11 +1,20 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState ,useRef} from 'react'
+
 
 export const Counter = ({children}) => {
     const [count, setCount] = useState(0);
+    let countRef = useRef(0);
+    let subRef = useRef(null);
 
     const add = () => {
-        setCount(count => count+1);
-        setCount(prev => prev+1);
+        countRef.current += 1;
+        console.log(countRef.current);
+    }
+    const sub = () => {
+        setCount(c => c-1);
+        if(count<=-5){
+            subRef.current.style.backgroundColor = 'red';
+        }
     }
 
     // useEffect(() => {
@@ -19,8 +28,8 @@ export const Counter = ({children}) => {
             Counter Button {children}
         </div>
         <div>
-            <button onClick={() => setCount((c) => c-1)}>-</button>
-            <button onClick={add}>+</button>
+            {/* <button onClick={() => setCount((c) => c-1)}>-</button> */}
+            <button ref={subRef} onClick={sub} >-</button>
         </div>
         <div>Result is {count}</div>
     </div>
