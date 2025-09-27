@@ -22,14 +22,21 @@ const Game = () => {
             const [i1,i2] = flipped;
             const card1 = grid[i1];
             const card2 = grid[i2];
+            console.log(card1,card2);
             if(card1 === card2){
-                setScore(prev => prev+4)
                 setMatched(prev => [...prev,i1,i2]);
-                setFlipped([])
+                setTimeout(() => {
+                    console.log("matched")
+                    setScore(prev => prev+4)
+                    setFlipped([])
+                },1000)
             }
             else{
-                setScore(prev => prev-1);
-                setFlipped([]);
+                setTimeout(() => {
+                    console.log("not matched")
+                    setScore(prev => prev-1);
+                    setFlipped([]);
+                },1000)
             }
         }
     }
@@ -45,7 +52,7 @@ const Game = () => {
                 let isMatched = matched.includes(i);
                 let isFlipped = flipped.includes(i);
                 return(
-                    <div key={i} onClick={() => toggle(i)} className=' min-w-12 border-2 min-h-30'>
+                    <div key={i} onClick={() => toggle(i)} className={`${isMatched && 'bg-green-200'} ${isFlipped && 'bg-amber-400'} min-w-12 border-2 min-h-30`}>
                         { isMatched || isFlipped ? number : "?"}
                     </div>
                 )
@@ -55,5 +62,6 @@ const Game = () => {
     </div>
   )
 }
+
 
 export default Game
