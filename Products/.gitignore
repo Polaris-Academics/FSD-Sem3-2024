@@ -7,14 +7,9 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-
 node_modules
 dist
 dist-ssr
-mini-project
-RandomColor
-Game
-Routing
 *.local
 
 # Editor directories and files
