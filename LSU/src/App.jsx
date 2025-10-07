@@ -1,4 +1,6 @@
 import React from 'react'
+import List from './List';
+import InputBox from './InputBox';
 
 const App = () => {
   const [text,setText] = React.useState('');

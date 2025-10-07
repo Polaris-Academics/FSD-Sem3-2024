@@ -1,10 +1,10 @@
 import React from 'react'
 
 const List = ({arr,text}) => {
-    filtereredArray = arr.filter()
+    const filtereredArray = arr.filter(elem => elem.toLowerCase().includes(text.toLowerCase()))
   return (
     <div>
-        {arr.map((c,id) => <div key={id}>{c}</div>)}
+        {filtereredArray.map((color,id) => <div key={id}>{color}</div>)}
     </div>
   )
 }
