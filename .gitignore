@@ -15,17 +15,3 @@ dist-ssr
 
 # Environment files
 .env
-.env.local
-.env.development
-.env.production
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
