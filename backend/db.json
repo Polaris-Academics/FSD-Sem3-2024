@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "hello",
+      "passwordHash": "$2b$10$hwzFFIwaWIQJVvnVuatGUuoJ5AztecLKeybbjFlAVAapO5qrik0H."
+    },
+    {
+      "id": 2,
+      "passwordHash": "$2b$10$iO/yer5kTsxbYlbTHIdW7O3D1gq.T0n4b0X4xdYeSnEzHSfG9C5N."
+    }
+  ],
+  "contacts": []
+}
