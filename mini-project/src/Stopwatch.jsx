@@ -19,7 +19,7 @@ const Stopwatch = () => {
 
     const formatTime = (time) => {
         let milliseconds = Math.floor((time % 1000) / 10);
-        let seconds = Math.floor((time / 1000) %60);
+        let seconds = Math.floor((time / 1000) % 60);
         let minutes = Math.floor(time / 60000);
         return {milliseconds, seconds, minutes}
     }
