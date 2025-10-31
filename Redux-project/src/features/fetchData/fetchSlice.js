@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export const fetchPosts = createAsyncThunk('fetchData/fetchPosts',async (input,_)=>{
-    const data = await fetch(`https://jsonplaceholder.typicode.com/posts`);
+    const data = await fetch(`https://jsonplaceholder.typicode.com/${input}`);
     const res = await data.json();
     return res;
 })
@@ -18,6 +18,7 @@ const fetchSlice = createSlice({
         builder.
             addCase(fetchPosts.pending, (state) => {
                 state.isLoading=true;
+                state.isError = false;
             })
             .addCase(fetchPosts.fulfilled , (state,actions) => {
                 state.isLoading=false;

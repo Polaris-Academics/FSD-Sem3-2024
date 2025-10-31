@@ -5,8 +5,9 @@ import { clearPosts, fetchPosts } from '../features/fetchData/fetchSlice';
 const FetchData = () => {
     const {items,isLoading,isError} = useSelector(state => state.myFetchPosts)
     const dispatch = useDispatch();
+    
     useEffect(() => {
-        dispatch(fetchPosts());
+        dispatch(fetchPosts('posts'));
     },[])
 
     if(isLoading) return <>Loading.....</>
@@ -16,7 +17,7 @@ const FetchData = () => {
     <div>
         <button onClick={() => dispatch(clearPosts())}>Clear</button>
         <div>
-            {items.map((item) => {
+            {items.slice(0,10).map((item) => {
                 return(
                     <div key={item.id}>
                         <span>{item.id}</span>
